@@ -8,6 +8,11 @@ connectToDatabase();
 
 app.use(express.json());
 
+const createRecipeRoute = require("./routes/createRecipe");
+
+app.use("/v1/api", createRecipeRoute);
+
+
 
 
 const PORT = process.env.PORT || 3000;
