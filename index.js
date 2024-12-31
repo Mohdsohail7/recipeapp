@@ -12,11 +12,19 @@ const createRecipeRoute = require("./routes/routes");
 const getDataRaoute = require("./routes/routes");
 const recipeDataByTitle = require("./routes/routes");
 const recipeDataByAuthor = require("./routes/routes");
+const reipeDataByDifificulty = require("./routes/routes");
+const updateRecipeById = require("./routes/routes");
+const updateRecipeByTitle = require("./routes/routes");
+const deleteRecipeById = require("./routes/routes");
 
 app.use("/v1/api", createRecipeRoute);
 app.use("/v1/api", getDataRaoute);
 app.use("/v1/api", recipeDataByTitle);
 app.use("/v1/api", recipeDataByAuthor);
+app.use("/v1/api", reipeDataByDifificulty);
+app.use("/v1/api", updateRecipeById);
+app.use("/v1/api", updateRecipeByTitle);
+app.use("/v1/api", deleteRecipeById);
 
 
 
