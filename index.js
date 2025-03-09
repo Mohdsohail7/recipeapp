@@ -27,6 +27,10 @@ app.use("/v1/api", updateRecipeByTitle);
 app.use("/v1/api", deleteRecipeById);
 
 
+// welcome route
+app.get("/", (req, res) => {
+    res.send(`<h2>Welcome to our Recipe App</h2>`);
+})
 
 
 const PORT = process.env.PORT || 3000;
