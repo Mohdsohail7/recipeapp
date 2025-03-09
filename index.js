@@ -1,11 +1,13 @@
 // require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const { connectToDatabase } = require("./database/db.connect");
 const app = express();
 
 // call to database connection
 connectToDatabase();
 
+app.use(cors());
 app.use(express.json());
 
 const createRecipeRoute = require("./routes/routes");
